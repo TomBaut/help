@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {IGallery} from './interfaces/IGallery';
+import {Galleries} from './constants/galleries.constant';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular';
+  title: string;
+  description: string;
+  galleries: IGallery[];
+
+  constructor() {
+    this.title = 'Moje podroze';
+    this.description = 'Gdzie, kiedy i czemu mnie tam wywialo';
+    this.galleries = Galleries;
+
+  }
 }
