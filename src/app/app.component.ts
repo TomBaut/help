@@ -11,11 +11,25 @@ export class AppComponent {
   title: string;
   description: string;
   galleries: IGallery[];
+  searchValue: string;
 
   constructor() {
     this.title = 'Moje podroze';
     this.description = 'Gdzie, kiedy i czemu mnie tam wywialo';
     this.galleries = Galleries;
-
+    this.searchValue = '';
   }
-}
+  onSearchValue() {
+    this.galleries = GALLERY;
+
+    if (this.searchValue) {
+      this.galleries = this.galleries.filter(item =>
+        (item.title.indexOf(this.searchValue) !== -1 || item.description.indexOf(this.searchValue) !== -1);
+    } else {
+      this.galleries = GALLERY;
+    }
+      )}
+
+
+
+
