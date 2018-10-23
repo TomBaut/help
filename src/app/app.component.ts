@@ -20,15 +20,15 @@ export class AppComponent {
     this.searchValue = '';
   }
   onSearchValue() {
-    this.galleries = GALLERY;
+    this.galleries = Galleries;
 
     if (this.searchValue) {
       this.galleries = this.galleries.filter(item =>
         (item.title.indexOf(this.searchValue) !== -1 || item.description.indexOf(this.searchValue) !== -1);
     } else {
-      this.galleries = GALLERY;
-    }
-      )}
+      this.galleries = Galleries;
+    }}}
+
 
 
 
