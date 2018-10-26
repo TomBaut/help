@@ -27,7 +27,7 @@ export class AppComponent {
         (item.title.indexOf(this.searchValue) !== -1 || item.description.indexOf(this.searchValue) !== -1);
     } else {
       this.galleries = Galleries;
-    }}}
+    }
 
 
 

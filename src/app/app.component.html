@@ -8,7 +8,7 @@
       {{galleries.length}}
 
       <input type="text" name="searchValue" [(ngModel)]="searchValue"
-             placeholder="Szukaj" (keyup) = "onSearchValue()">
+             placeholder="Szukaj" >
 
       <p>Szukam: {{searchValue}} </p>
 
@@ -16,10 +16,11 @@
       <div class="gallery">
 
         <div class="row">
-          <div class="grid-5 grid-centered" *ngFor="let item of galleries; trackBy:item?.galleryId">
+          <div class="grid-5 grid-centered" *ngFor="let item of galleries; trackBy:item?.galleryId | searchGalleries : searchValue
+">
             <p>{{item.title}}
             </p>
-            <img src="{{item.thumbUrl}}" alt="">
+           <div><img class="gallery-img-size" src="{{item.thumbUrl}}" alt=""></div>
             <p>{{item.dateCreated | polishDate}}</p>
             <p>{{item.description}}</p>
 
