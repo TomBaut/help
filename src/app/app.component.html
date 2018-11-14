@@ -16,7 +16,7 @@
       <div class="gallery">
 
         <div class="row">
-          <div class="grid-5 grid-centered" *ngFor="let item of galleries; trackBy:item?.galleryId | searchGalleries : searchValue
+          <div class="grid-5 grid-centered" *ngFor="let item of galleries | searchGalleries : searchValue; trackBy:item?.galleryId
 ">
             <p>{{item.title}}
             </p>

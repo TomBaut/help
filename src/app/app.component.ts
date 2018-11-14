@@ -28,6 +28,8 @@ export class AppComponent {
     } else {
       this.galleries = Galleries;
     }
+  }
+}
 
 
 
