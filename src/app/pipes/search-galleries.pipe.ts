@@ -18,7 +18,7 @@ export class SearchGalleriesPipe implements PipeTransform {
 
     if (args) {
       this.galleries = this.galleries.filter(item =>
-        (item.title.indexOf(args) !== -1 || item.description.indexOf(args) !== -1);
+        (item.title.indexOf(args) !== -1 || item.description.indexOf(args) !== -1));
     } else {
       this.galleries = value;
     }

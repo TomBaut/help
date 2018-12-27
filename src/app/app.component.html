@@ -14,22 +14,22 @@
 
 
       <div class="gallery">
-
+      <app-galleries></app-galleries>
         <div class="row">
           <div class="grid-5 grid-centered" *ngFor="let item of galleries | searchGalleries : searchValue; trackBy:item?.galleryId
 ">
             <p>{{item.title}}
             </p>
-           <div><img class="gallery-img-size" src="{{item.thumbUrl}}" alt=""></div>
+            <div><img class="gallery-img-size" src="{{item.thumbUrl}}" alt=""></div>
             <p>{{item.dateCreated | polishDate}}</p>
             <p>{{item.description}}</p>
 
 
-          <!--   <div class="grid-4"><img src="../assets/img/gallery/maroko.jpg" alt="ss"></div>-->
+            <!--   <div class="grid-4"><img src="../assets/img/gallery/maroko.jpg" alt="ss"></div>-->
+
+          </div>
 
         </div>
-
-      </div>
         <!-- </section>-->
 
         <!--  </div>-->
