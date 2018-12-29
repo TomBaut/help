@@ -7,6 +7,7 @@ import { PolishDatePipe } from './pipes/polish-date.pipe';
 import { SearchGalleriesPipe } from './pipes/search-galleries.pipe';
 import { NavComponent } from './components/nav/nav.component';
 import { GalleriesComponent } from './components/galleries/galleries/galleries.component';
+import { GalleryItemComponent } from './components/galleries/gallery-item/gallery-item.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { GalleriesComponent } from './components/galleries/galleries/galleries.c
     PolishDatePipe,
     SearchGalleriesPipe,
     NavComponent,
-    GalleriesComponent
+    GalleriesComponent,
+    GalleryItemComponent
   ],
   imports: [
     BrowserModule,
