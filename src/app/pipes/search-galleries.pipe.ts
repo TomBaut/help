@@ -12,7 +12,7 @@ export class SearchGalleriesPipe implements PipeTransform {
     this.galleries = value;
 
 
-//
+
 
     this.galleries = value;
 

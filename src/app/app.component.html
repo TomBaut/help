@@ -3,18 +3,25 @@
   <div class="row">
     <app-nav></app-nav>
     <section class=”container”>
-    <h1>{{title}}</h1>
+      <h1>{{title}}</h1>
       <p>{{description}}</p>
       {{galleries.length}}
 
       <input type="text" name="searchValue" [(ngModel)]="searchValue"
-             placeholder="Szukaj" >
+             placeholder="Szukaj">
 
       <p>Szukam: {{searchValue}} </p>
 
+      <div>
+        <ul>
+          <li>2015</li>
+          <li>2013</li>
+          <li>2012</li>
+        </ul>
 
+      </div>
       <div class="gallery">
-      <app-galleries></app-galleries>
+        <app-galleries></app-galleries>
         <div class="row">
           <div class="grid-5 grid-centered" *ngFor="let item of galleries | searchGalleries : searchValue; trackBy:item?.galleryId
 ">
@@ -33,5 +40,6 @@
         <!-- </section>-->
 
         <!--  </div>-->
-            </div>
+      </div>
 
+    </section>
