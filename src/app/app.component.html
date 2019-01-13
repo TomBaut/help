@@ -4,8 +4,11 @@
     <app-nav></app-nav>
     <section class=”container”>
       <h1>{{title}}</h1>
-      <p>{{description}}</p>
-      {{galleries.length}}
+     <!-- <p>{{description}}</p>
+     {{galleries.length}}-->
+        <div *ngIf="galleries != null && galleries != undefiend ">
+            {{galleries .length}}
+        </div>
 
       <input type="text" name="searchValue" [(ngModel)]="searchValue"
              placeholder="Szukaj">
