@@ -6,6 +6,8 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { NavComponent } from './components/nav/nav.component';
 import { UserComponent } from './components/user/user.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { UseraddComponent } from './components/useradd/useradd.component';
+import { UsernoteComponent } from './components/usernote/usernote.component';
 
 
 
@@ -15,7 +17,9 @@ import { AdminComponent } from './components/admin/admin.component';
     AppComponent,
     NavComponent,
     UserComponent,
-    AdminComponent
+    AdminComponent,
+    UseraddComponent,
+    UsernoteComponent
   ],
   imports: [
     BrowserModule,
